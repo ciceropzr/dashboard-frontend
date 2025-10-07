@@ -31,8 +31,10 @@ module.exports = {
           dark: "#f8fafc", // quase branco
         },
       },
+      backgroundImage: {
+        login: "linear-gradient(to bottom right, #ea580c, #a855f7)", 
+      },
     },
   },
   plugins: [],
 };
-

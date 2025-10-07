@@ -7,17 +7,16 @@ export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  // Evita erro de hidratação
+  // evita erro de hidratação
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
   return (
     <button
-      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="px-3 py-2 rounded-lg border bg-surface-light dark:bg-surface-dark 
-                 text-text-light dark:text-text-dark hover:opacity-80 transition"
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      className="px-3 py-2 rounded-lg border bg-white/10 dark:bg-black/10"
     >
-      {theme === "light" ? "🌙 Escuro" : "☀️ Claro"}
+      {theme === "dark" ? "☀️ Claro" : "🌙 Escuro"}
     </button>
   );
 }
